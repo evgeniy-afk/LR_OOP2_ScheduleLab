@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Schedule faculty="Факультет комп'ютерних наук та кібернетики" academicYear="2026-2027">
+
+  <Lesson id="1" day="Понеділок" time="08:40">
+    <Subject>Об'єктно-орієнтоване програмування</Subject>
+    <Teacher>
+      <FullName>Петренко Олександр Іванович</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра програмних систем і технологій</Department>
+      <Position>Доцент</Position>
+    </Teacher>
+    <Classroom number="303" building="Корпус 1" capacity="120" />
+    <Curriculum semester="3" hours="60" control="Іспит" />
+    <Students group="К-17" course="2">
+      <Student>Коваленко Андрій Петрович</Student>
+      <Student>Мельник Ірина Олегівна</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="2" day="Понеділок" time="10:35" type="Практика">
+    <Subject>Дискретна математика</Subject>
+    <Teacher>
+      <FullName>Шевченко Марія Василівна</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра математичної інформатики</Department>
+      <Position>Старший викладач</Position>
+    </Teacher>
+    <Classroom number="215" building="Корпус 2" capacity="30" />
+    <Curriculum semester="1" hours="45" control="Залік" />
+    <Students group="К-18" course="1">
+      <Student>Бондаренко Олег Сергійович</Student>
+      <Student>Ткаченко Анна Михайлівна</Student>
+      <Student>Кравченко Денис Юрійович</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="3" day="Вівторок" time="08:40" type="Лекція" week="Непарний">
+    <Subject>Комп'ютерні мережі</Subject>
+    <Teacher>
+      <FullName>Зінченко Віктор Андрійович</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра мережевих технологій</Department>
+      <Position>Професор</Position>
+    </Teacher>
+    <Classroom number="101" building="Корпус 1" capacity="150" />
+    <Curriculum semester="3" hours="90" control="Іспит" />
+    <Students group="К-17" course="2">
+      <Student>Коваленко Андрій Петрович</Student>
+      <Student>Мельник Ірина Олегівна</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="4" day="Вівторок" time="12:20" type="Лабораторна" week="Парний" subgroup="1">
+    <Subject>Комп'ютерні мережі</Subject>
+    <Teacher>
+      <FullName>Лисенко Наталія Петрівна</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра мережевих технологій</Department>
+      <Position>Асистент</Position>
+    </Teacher>
+    <Classroom number="412" building="Корпус 3" capacity="15" />
+    <Curriculum semester="3" hours="90" control="Іспит" />
+    <Students group="К-17" course="2">
+      <Student>Коваленко Андрій Петрович</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="5" day="Середа" time="10:35">
+    <Subject>Теорія формальних мов</Subject>
+    <Teacher>
+      <FullName>Петренко Олександр Іванович</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра програмних систем і технологій</Department>
+      <Position>Доцент</Position>
+    </Teacher>
+    <Classroom number="303" building="Корпус 1" capacity="120" />
+    <Curriculum semester="3" hours="45" control="Залік" />
+    <Students group="К-19" course="2">
+      <Student>Савченко Юлія Іванівна</Student>
+      <Student>Руденко Максим Олександрович</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="6" day="Четвер" time="14:05" type="Практика" week="Непарний" subgroup="2" online="Так">
+    <Subject>Об'єктно-орієнтоване програмування</Subject>
+    <Teacher>
+      <FullName>Мороз Ігор Валентинович</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра програмних систем і технологій</Department>
+      <Position>Асистент</Position>
+    </Teacher>
+    <Classroom number="Zoom" building="Онлайн" capacity="30" />
+    <Curriculum semester="3" hours="60" control="Іспит" />
+    <Students group="К-18" course="1">
+      <Student>Бондаренко Олег Сергійович</Student>
+      <Student>Ткаченко Анна Михайлівна</Student>
+    </Students>
+  </Lesson>
+
+  <Lesson id="7" day="П'ятниця" time="08:40" type="Лекція">
+    <Subject>Бази даних</Subject>
+    <Teacher>
+      <FullName>Шевченко Марія Василівна</FullName>
+      <Faculty>Факультет комп'ютерних наук та кібернетики</Faculty>
+      <Department>Кафедра математичної інформатики</Department>
+      <Position>Старший викладач</Position>
+    </Teacher>
+    <Classroom number="215" building="Корпус 2" capacity="30" />
+    <Curriculum semester="1" hours="60" control="Іспит" />
+    <Students group="К-19" course="2">
+      <Student>Савченко Юлія Іванівна</Student>
+      <Student>Руденко Максим Олександрович</Student>
+    </Students>
+  </Lesson>
+
+</Schedule>

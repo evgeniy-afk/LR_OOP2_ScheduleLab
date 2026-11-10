@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ScheduleLab.MainPage"
+             Title="Розклад — робота з XML">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="1. Файли" FontSize="18" FontAttributes="Bold" />
+            <Grid ColumnDefinitions="*,*,2*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="8">
+                <Button Grid.Row="0" Grid.Column="0" Text="XML з диска" Command="{Binding OpenLocalXmlCommand}" />
+                <Button Grid.Row="0" Grid.Column="1" Text="XML з Google Drive" Command="{Binding OpenDriveXmlCommand}" />
+                <Label Grid.Row="0" Grid.Column="2" VerticalOptions="Center"
+                       Text="{Binding XmlFileName, StringFormat='XML: {0}'}" />
+
+                <Button Grid.Row="1" Grid.Column="0" Text="XSL з диска" Command="{Binding OpenLocalXslCommand}" />
+                <Button Grid.Row="1" Grid.Column="1" Text="XSL з Google Drive" Command="{Binding OpenDriveXslCommand}" />
+                <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Center"
+                       Text="{Binding XslFileName, StringFormat='XSL: {0}'}" />
+            </Grid>
+
+            <Label Text="2. Параметри пошуку" FontSize="18" FontAttributes="Bold" />
+            <Picker Title="Спосіб аналізу"
+                    ItemsSource="{Binding Strategies}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding SelectedStrategy}" />
+
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="Auto,Auto" ColumnSpacing="10" RowSpacing="8">
+                <Picker Grid.Row="0" Grid.Column="0" Title="День"
+                        ItemsSource="{Binding Days}" SelectedItem="{Binding SelectedDay}" />
+                <Picker Grid.Row="0" Grid.Column="1" Title="Тип заняття"
+                        ItemsSource="{Binding Types}" SelectedItem="{Binding SelectedType}" />
+                <Picker Grid.Row="0" Grid.Column="2" Title="Група"
+                        ItemsSource="{Binding Groups}" SelectedItem="{Binding SelectedGroup}" />
+                <Picker Grid.Row="1" Grid.Column="0" Title="Дисципліна"
+                        ItemsSource="{Binding Subjects}" SelectedItem="{Binding SelectedSubject}" />
+                <Picker Grid.Row="1" Grid.Column="1" Title="Викладач"
+                        ItemsSource="{Binding Teachers}" SelectedItem="{Binding SelectedTeacher}" />
+                <Picker Grid.Row="1" Grid.Column="2" Title="Кафедра"
+                        ItemsSource="{Binding Departments}" SelectedItem="{Binding SelectedDepartment}" />
+            </Grid>
+
+            <Label Text="3. Дії" FontSize="18" FontAttributes="Bold" />
+            <FlexLayout Wrap="Wrap" JustifyContent="Start">
+                <Button Text="Пошук" Margin="0,0,8,8" Command="{Binding SearchCommand}" />
+                <Button Text="Трансформувати в HTML" Margin="0,0,8,8" Command="{Binding TransformCommand}" />
+                <Button Text="Зберегти XML на Google Drive" Margin="0,0,8,8" Command="{Binding SaveXmlToDriveCommand}" />
+                <Button Text="Зберегти HTML на Google Drive" Margin="0,0,8,8" Command="{Binding SaveHtmlToDriveCommand}" />
+                <Button Text="Clear" Margin="0,0,8,8" Command="{Binding ClearCommand}" />
+                <Button Text="Вихід" Margin="0,0,8,8" BackgroundColor="#B03A2E" Command="{Binding ExitCommand}" />
+            </FlexLayout>
+
+            <Label Text="Результат пошуку" FontSize="18" FontAttributes="Bold" />
+            <Editor Text="{Binding ResultText}" IsReadOnly="True" HeightRequest="300" />
+
+            <Label Text="HTML-перегляд" FontSize="18" FontAttributes="Bold" />
+            <WebView Source="{Binding HtmlPreview}" HeightRequest="400" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
